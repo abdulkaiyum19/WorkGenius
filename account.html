@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | WorkGenius</title>
+    <link rel="stylesheet" href="account.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Signup Form Section -->
+      <div class="form-section">
+        <img src="Logo WG.png" alt="Logo" class="logo" />
+        <h1>Boost Productivity</h1>
+        <p class="subtitle">
+          Maximize productivity with real-time insights, automated timesheets,
+          budget costing, and more.
+        </p>
+
+        <form id="signupForm">
+          <label for="first-name">First name *</label>
+          <input
+            type="text"
+            id="first-name"
+            placeholder="Enter your first name"
+            required
+          />
+
+          <label for="last-name">Last name *</label>
+          <input
+            type="text"
+            id="last-name"
+            placeholder="Enter your last name"
+            required
+          />
+
+          <label for="email">Work email *</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your work email"
+            required
+          />
+
+          <label for="password">Password *</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter 6 or more characters"
+            required
+          />
+
+          <label class="terms">
+            <input type="checkbox" required />
+            I agree to the <a href="#">Terms</a>,
+            <a href="#">Privacy Policy</a> and <a href="#">DPA</a>
+          </label>
+
+          <button type="submit">Create My Account</button>
+        </form>
+        <p class="note">No credit card required</p>
+      </div>
+
+      <!-- Testimonial Section with Static Image -->
+      <div class="testimonial-section">
+        <img src="assets/Dashboard (2).jpg" alt="Testimonial Visual" />
+      </div>
+    </div>
+
+    <!-- Modal for success message -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <h2>Account Created Successfully!</h2>
+        <p>Your account has been created.</p>
+        <button id="goToSigninBtn">Go to Sign In</button>
+      </div>
+    </div>
+
+    <script src="ac.js"></script>
+  </body>
+</html>

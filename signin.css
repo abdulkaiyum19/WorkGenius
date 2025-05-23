@@ -1,0 +1,191 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f0f4ff, #ffffff);
+  color: #333;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.form-section, .testimonial-section {
+  flex: 1 1 50%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.form-section {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.form-section .logo {
+  width: 100px;
+  margin-bottom: 5px;
+}
+
+.form-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 5px;
+  color: #1a3cff;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccd2e3;
+  font-size: 16px;
+  background-color: #f9faff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #265df2;
+  box-shadow: 0 0 0 3px rgba(38, 93, 242, 0.2);
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+  color: #888;
+}
+
+.password-wrapper .eye-icon:hover {
+  color: #265df2;
+}
+
+.terms {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #666;
+}
+
+.terms a {
+  color: #265df2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, #1a73e8, #673ab7);
+  color: #fff;
+  border: none;
+  padding: 16px 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  margin-top: 25px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 6px 15px rgba(26, 115, 232, 0.4);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, #0f5fe0, #5e35b1);
+}
+
+.note {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.testimonial-section {
+  background: linear-gradient(135deg, #1a73e8, #673ab7);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 60px 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.testimonial-section h2 {
+  font-size: 40px; /* 2.5rem */
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.testimonial-section p {
+  font-size: 19.2px; /* 1.2rem */
+  max-width: 420px;
+  line-height: 2;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 768px) {
+  .form-section,
+  .testimonial-section {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+
+  .form-section h1 {
+    font-size: 32px; /* 2rem */
+  }
+
+  .testimonial-section h2 {
+    font-size: 28.8px; /* 1.8rem */
+  }
+
+  .testimonial-section p {
+    font-size: 16px; /* 1rem */
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

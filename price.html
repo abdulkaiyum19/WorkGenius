@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing Page | WorkGenius</title>
+  <link rel="stylesheet" href="price.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="Logo WG.png" alt="WorkGenius Logo" class="logo-img" />
+      WorkGenius
+    </div>
+    <nav>
+      <ul>
+        <li><a href="features.html">Features</a></li>
+        <!-- <li><a href="pricing.html">Pricing</a></li> -->
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="account.html" class="cta">Start Free</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Manage your workforce. <span>Supercharge productivity.</span></h1>
+    <p class="trial-info">
+      Sign up for a <strong>free 14-day trial</strong>. No credit card required. 30-day money-back guarantee.
+    </p>
+    <a href="account.html">
+  <button class="cta">Start free trial</button>
+</a>
+
+
+    <!-- Billing Toggle -->
+    <div class="toggle">
+      <button id="annualBtn">Annual (2 months free)</button>
+      <button id="monthlyBtn" class="active">Monthly</button>
+    </div>
+  </section>
+
+ <!-- Pricing Section -->
+<section class="pricing">
+  <div class="card">
+    <h2>Starter</h2>
+    <p class="price">$<span id="starterPrice">7</span> <span class="unit">/ seat / mo</span></p>
+    <p class="desc">
+      2 seat minimum.<br>
+      Basic time tracking and productivity tools for small teams at a low cost.
+    </p>
+    <a href="account.html" class="cta-btn">Choose Starter plan</a>
+  </div>
+
+  <div class="card">
+    <h2>Grow</h2>
+    <p class="price">$<span id="growPrice">9</span> <span class="unit">/ seat / mo</span></p>
+    <p class="desc">
+      2 seat minimum.<br>
+      Advanced tools, reporting, and one integration for growing teams.
+    </p>
+    <a href="account.html" class="cta-btn">Choose Grow plan</a>
+  </div>
+
+  <div class="card popular">
+    <div class="tag">Popular</div>
+    <h2>Team</h2>
+    <p class="price">$<span id="teamPrice">12</span> <span class="unit">/ seat / mo</span></p>
+    <p class="desc">
+      2 seat minimum.<br>
+      Payments, scheduling, and unlimited integrations for larger teams.
+    </p>
+    <a href="account.html" class="cta-btn">Choose Team plan</a>
+    <a href="#" class="link">Get a demo →</a>
+  </div>
+
+  <div class="card">
+    <h2>Enterprise</h2>
+    <p class="price">$<span id="enterprisePrice">25</span> <span class="unit">/ seat / mo</span></p>
+    <p class="desc">
+      Billed annually.<br>
+      Custom setup, account provisioning, and dedicated support for complex needs.
+    </p>
+    <a href="account.html" class="cta-btn">Let's talk</a>
+    <a href="#" class="link">Get a demo →</a>
+  </div>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -9,15 +9,15 @@
   <body>
     <header class="navbar">
       <div class="logo">
-  <img src="Logo V2 Colour.jpg" alt="WorkGenius Logo" class="logo-img" />
-  WorkGenius
-</div>
+        <img src="Logo WG.png" alt="WorkGenius Logo" class="logo-img" />
+        WorkGenius
+      </div>
       <nav>
         <ul>
           <li><a href="features.html">Features</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="price.html">Pricing</a></li>
           <li><a href="signin.html">Sign In</a></li>
-          <li><a href="start.html" class="cta">Start Free</a></li>
+          <li><a href="account.html" class="cta">Start Free</a></li>
         </ul>
       </nav>
     </header>
@@ -30,16 +30,22 @@
           distributed team.
         </p>
         <div class="cta-buttons">
-          <a href="start.html" class="cta-button">Create Account</a>
-          <a href="start.html" class="secondary-button">Free 14-day Trial</a>
+          <a href="account.html" class="cta-button">Create Account</a>
+          <a href="account.html" class="secondary-button">Free 14-day Trial</a>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="DashBoard Preview.webp" alt="Dashboard preview" />
+      <div class="hero-image slideshow-container">
+        <img
+          class="slide active"
+          src="assets/Dashboard (1).jpg"
+          alt="Dashboard preview"
+        />
+        <img class="slide" src="assets/Dashboard (2).jpg" alt="Second preview" />
+        <img class="slide" src="assets/Dashboard (3).jpg" alt="Third preview" />
       </div>
     </section>
 
-        <section class="social-proof">
+    <section class="social-proof">
       <h2>Trusted Clients</h2>
       <div class="stats">
         <div class="stat-item">
@@ -52,15 +58,15 @@
         </div>
         <div class="stat-item">
           <div class="stat" data-target="15">0</div>
-          <div class="stat-label"> Projects completed</div>
+          <div class="stat-label">Projects completed</div>
         </div>
       </div>
 
       <blockquote>
-        “WorkGenius helped us cut down project times by 25%. A game changer!” –TechSpark
+        “WorkGenius helped us cut down project times by 25%. A game changer!”
+        –TechSpark
       </blockquote>
     </section>
-
 
     <section id="features" class="features">
       <h2>Our Features</h2>
@@ -83,13 +89,12 @@
       </div>
     </section>
 
-
     <section id="pricing" class="pricing">
       <h2>Pricing</h2>
       <div class="pricing-plans">
-        <div class="plan">Free</div>
-        <div class="plan">Premium</div>
-        <div class="plan">Enterprise</div>
+        <a href="price.html" class="plan">Free</a>
+        <a href="price.html" class="plan">Premium</a>
+        <a href="price.html" class="plan">Enterprise</a>
       </div>
       <p>
         All plans include time tracking and employee monitoring. 14-day trial,
@@ -97,7 +102,7 @@
       </p>
     </section>
 
-    <section id="resources" class="resources">
+    <!-- <section id="resources" class="resources">
       <h2>Resources & Support</h2>
       <ul>
         <li><a href="blog.html">Productivity Blog</a></li>
@@ -106,24 +111,35 @@
         <li><a href="partners.html">Partner Programs</a></li>
         <li><a href="careers.html">Careers</a></li>
       </ul>
-    </section>
+    </section> -->
 
-    <section id="newsletter" class="newsletter">
+    <!-- <section id="newsletter" class="newsletter">
       <h2>Connected With Us</h2>
       <form action="#" method="post" id="newsletter-form">
         <input type="email" placeholder="Enter your email" required />
         <button type="submit" class="cta-button">Subscribe</button>
       </form>
       <p id="newsletter-message" class="message"></p>
-    </section>
+    </section> -->
 
     <footer>
       <p>© 2025 WorkGenius. All rights reserved.</p>
     </footer>
-
     <!-- Chatbot Icon -->
-    <div class="chatbot-icon" id="chatbot-icon" title="Chat with us!">🤖</div>
-
+     <div class="chatbot-icon" id="chatbot-icon" title="Chat with us!">🤖</div>
+    <div class="chat-popup" id="chat-popup">
+  <div class="chat-header">
+    <span>🤖 WorkGenius Assistant</span>
+    <span class="close-chat" onclick="toggleChat()">×</span>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="message bot">"Hello! 👋 I'm WorkGenius Assistant. How can I help you today?"</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Type a message..." onkeydown="handleKey(event)" />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signin | WorkGenius</title>
+    <link rel="stylesheet" href="signin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-section">
+        <img src="Logo WG.png" alt="WorkGenius Logo" class="logo" />
+
+        <h1>Sign in to WorkGenius</h1>
+        <p class="subtitle">Enter your details below to access your account</p>
+
+        <form onsubmit="redirectToPage(event)">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="name@example.com"
+            required
+          />
+
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••"
+              required
+            />
+            <span class="eye-icon" onclick="togglePassword()">👁</span>
+          </div>
+
+          <div class="terms">
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit">Sign In</button>
+        </form>
+
+        <p class="terms note">
+          Don't have an account? <a href="account.html">Sign up</a>
+        </p>
+      </div>
+
+      <div class="testimonial-section">
+        <div>
+          <h2>Welcome to our community</h2>
+          <p>
+            Smart Productivity Tracking <br />
+            Weekly Performance Report<br />
+            Smart Employee Management<br />
+            Real-Time AI Assistance <br />
+            Burnout Monitoring <br />all in one platform.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function togglePassword() {
+        const pwdInput = document.getElementById("password");
+        pwdInput.type = pwdInput.type === "password" ? "text" : "password";
+      }
+
+      function redirectToPage(event) {
+        event.preventDefault(); // Prevent form from submitting normally
+
+        // You can add login validation here if needed
+        // Redirect to dashboard or any other page
+        window.location.href = "dashboard.html"; // 🔁 Change to your target page
+      }
+    </script>
+  </body>
+</html>
