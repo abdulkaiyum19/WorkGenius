@@ -476,23 +476,35 @@ footer {
   background: #182848;
   color: #ddd;
   padding: 1.5rem 2rem;
-  text-align: center;
 }
 
-.footer-links {
-  margin-bottom: 0.8rem;
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontal center */
+  text-align: center;  /* Text center */
 }
 
-.footer-links a {
+.footer-container p,
+.contact-info p {
+  margin: 4px 0;
+}
+
+.footer-container a {
   color: #bbb;
-  margin: 0 0.7rem;
   font-weight: 600;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
-.footer-links a:hover {
+.footer-container a:hover {
   color: #ffcc00;
 }
+
+.contact-info {
+  margin-top: 0px;
+}
+
 
 /* ===== Chatbot Icon ===== */
 /* Chat Icon */

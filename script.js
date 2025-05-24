@@ -131,8 +131,8 @@ function getBotResponse(input) {
   }
 
   // Trustworthiness
-  if (input.includes("is workgenius trusted") || input.includes("can i trust workgenius")) {
-    return "Absolutely. WorkGenius is used by leading teams worldwide and complies with GDPR and enterprise security standards.";
+  if (input.includes("is workgenius trusted") || input.includes("can i trust workgenius")|| input.includes("trust")|| input.includes("can i trust")) {
+    return "Absolutely. WorkGenius is used by leading teams worldwide and complies with GDPR and enterprise security standards. It enhances productivity, boosts performance, provides real-time AI assistance, and helps monitor burnout to support healthier, more efficient teams.";
   }
 
   // Feedback Frequency
@@ -299,7 +299,83 @@ function getBotResponse(input) {
   if (["partner", "reseller", "business inquiry"].some(word => input.includes(word))) {
     return "We're open to partnerships! Please reach out via <a href='mailto:partners@workgenius.com'>partners@workgenius.com</a>.";
   }
+  // Team Size Limits
+if (input.includes("team size") || input.includes("maximum users") || input.includes("user limit")) {
+  return "WorkGenius scales with your team — from small startups to large enterprises, with flexible user limits depending on your plan.";
+}
 
+// Offline Mode
+if (input.includes("offline mode") || input.includes("work offline") || input.includes("no internet")) {
+  return "Yes, you can track time and tasks offline; data will sync automatically once you're back online.";
+}
+
+// Mobile App Availability
+if (input.includes("mobile app") || input.includes("app download") || input.includes("ios app") || input.includes("android app")) {
+  return "Our iOS and Android apps are coming soon! Meanwhile, you can use WorkGenius on any mobile browser.";
+}
+
+// Data Export
+if (input.includes("export data") || input.includes("download reports") || input.includes("export reports")) {
+  return "You can export your data and reports in CSV and PDF formats directly from your dashboard.";
+}
+
+// Customizable Notifications
+if (input.includes("notifications") || input.includes("alerts") || input.includes("reminders")) {
+  return "Customize your notifications to get alerts about task deadlines, performance updates, and burnout warnings.";
+}
+
+// Multi-language Support
+if (input.includes("languages") || input.includes("multi-language") || input.includes("localization")) {
+  return "Currently, WorkGenius supports English, with more languages like Bangla and Spanish coming soon.";
+}
+
+// API Access
+if (input.includes("api") || input.includes("developer access") || input.includes("integration api")) {
+  return "We offer API access for custom integrations. Please contact our support team to get started.";
+}
+
+// Custom Branding
+if (input.includes("custom branding") || input.includes("white label") || input.includes("brand logo")) {
+  return "Enterprise plans include custom branding options so you can personalize WorkGenius with your company logo and colors.";
+}
+
+// Data Retention Policy
+if (input.includes("data retention") || input.includes("data storage") || input.includes("how long data stored")) {
+  return "Your data is stored securely and retained as long as your account is active. You can request deletion at any time.";
+}
+
+// Training & Onboarding
+if (input.includes("training") || input.includes("onboarding") || input.includes("how to train team")) {
+  return "We provide onboarding webinars, video tutorials, and a detailed knowledge base to help your team get started.";
+}
+
+// GDPR Compliance Details
+if (input.includes("gdpr details") || input.includes("gdpr compliance") || input.includes("privacy regulations")) {
+  return "WorkGenius fully complies with GDPR. We ensure data privacy, user consent, and offer data access and deletion options.";
+}
+
+// Custom Reports
+if (input.includes("custom reports") || input.includes("report builder") || input.includes("create reports")) {
+  return "Yes, you can create custom reports tailored to your team’s needs using our flexible report builder tool.";
+}
+// Multiple Timezones
+if (input.includes("timezones") || input.includes("timezone support") || input.includes("different time zones")) {
+  return "WorkGenius supports teams across multiple time zones with automatic timezone detection and scheduling.";
+}
+
+// Data Backup
+if (input.includes("backup") || input.includes("data backup") || input.includes("restore data")) {
+  return "Your data is backed up regularly on secure servers to prevent any loss. Restoration is available if needed.";
+}
+// Password Security
+if (input.includes("password security") || input.includes("password strength") || input.includes("account security")) {
+  return "We enforce strong password policies and offer two-factor authentication to keep your account safe.";
+}
+// Support Hours
+if (input.includes("support hours") || input.includes("customer support") || input.includes("help availability")) {
+  return "Our support team is available Monday through Friday, 9 AM to 6 PM (EST). We also offer 24/7 chat support on premium plans.";
+}
   // Fallback
   return "I'm here to help! You can ask me about <a href='features.html' target='_blank'>Features</a>, <a href='price.html' target='_blank'>Pricing</a>, <a href='account.html' target='_blank'>Free Trial</a>, or visit our <a href='help.html' target='_blank'>Help Center</a>.";
+
 }
